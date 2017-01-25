@@ -1,24 +1,24 @@
 {
-    "name": "zen/translation-bundle",
+    "name": "mweb/translation-bundle",
     "type": "symfony-bundle",
     "authors": [{
             "name": "Charly Mainier",
             "email": "charly.mainier@gmail.com"
         },
         {
-            "name": "Fabien Normand",
+            "name": "Fabien",
             "email": "fab@unmecdubweb.com"
         }],
     "require": {
-        "php": ">=5.4",
-        "symfony/framework-bundle": ">=2.5.6",
+        "php": ">=7",
+        "symfony/framework-bundle": ">=2.8.1",
         "twig/twig": "*",
         "doctrine/doctrine-bundle": "*"
     },
     "autoload": {
         "psr-0": {
-            "ZEN\\TranslationBundle": ""
+            "MWEB\\TranslationBundle": ""
         }
     },
-    "target-dir": "ZEN/TranslationBundle"
+    "target-dir": "MWEB/TranslationBundle"
 }
