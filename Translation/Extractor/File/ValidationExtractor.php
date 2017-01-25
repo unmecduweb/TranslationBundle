@@ -16,13 +16,13 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Translation\Extractor\File;
+namespace MWEB\TranslationBundle\Translation\Extractor\File;
 
-use ZEN\TranslationBundle\Model\Message;
+use MWEB\TranslationBundle\Model\Message;
 use Symfony\Component\Validator\Mapping\ClassMetadataFactoryInterface;
 use Symfony\Component\Validator\MetadataFactoryInterface;
-use ZEN\TranslationBundle\Model\MessageCatalogue;
-use ZEN\TranslationBundle\Translation\Extractor\FileVisitorInterface;
+use MWEB\TranslationBundle\Model\MessageCatalogue;
+use MWEB\TranslationBundle\Translation\Extractor\FileVisitorInterface;
 
 /**
  * Extracts translations validation constraints.

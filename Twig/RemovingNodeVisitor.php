@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Twig;
+namespace MWEB\TranslationBundle\Twig;
 
 /**
  * Removes translation metadata filters from the AST.

@@ -16,11 +16,11 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Tests\Translation\Dumper;
+namespace MWEB\TranslationBundle\Tests\Translation\Dumper;
 
-use ZEN\TranslationBundle\Model\MessageCatalogue;
-use ZEN\TranslationBundle\Model\FileSource;
-use ZEN\TranslationBundle\Model\Message;
+use MWEB\TranslationBundle\Model\MessageCatalogue;
+use MWEB\TranslationBundle\Model\FileSource;
+use MWEB\TranslationBundle\Model\Message;
 
 abstract class BaseDumperTest extends \PHPUnit_Framework_TestCase
 {

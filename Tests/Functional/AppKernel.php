@@ -16,9 +16,9 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Tests\Functional;
+namespace MWEB\TranslationBundle\Tests\Functional;
 
-use ZEN\TranslationBundle\Exception\RuntimeException;
+use MWEB\TranslationBundle\Exception\RuntimeException;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\HttpKernel\Kernel;
@@ -46,10 +46,10 @@ class AppKernel extends Kernel
     public function registerBundles()
     {
         return array(
-            new \ZEN\TranslationBundle\Tests\Functional\TestBundle\TestBundle(),
+            new \MWEB\TranslationBundle\Tests\Functional\TestBundle\TestBundle(),
             new \Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new \Symfony\Bundle\TwigBundle\TwigBundle(),
-            new \ZEN\TranslationBundle\ZENTranslationBundle(),
+            new \MWEB\TranslationBundle\MWEBTranslationBundle(),
             new \Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new \JMS\DiExtraBundle\LIDiExtraBundle($this),
             new \LI\AopBundle\LIAopBundle(),
@@ -63,7 +63,7 @@ class AppKernel extends Kernel
 
     public function getCacheDir()
     {
-        return sys_get_temp_dir().'/ZENTranslationBundle';
+        return sys_get_temp_dir().'/MWEBTranslationBundle';
     }
 
     public function serialize()

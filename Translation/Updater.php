@@ -16,13 +16,13 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Translation;
+namespace MWEB\TranslationBundle\Translation;
 
-use ZEN\TranslationBundle\Util\FileUtils;
-use ZEN\TranslationBundle\Exception\RuntimeException;
-use ZEN\TranslationBundle\Model\MessageCatalogue;
-use ZEN\TranslationBundle\Model\Message;
-use ZEN\TranslationBundle\Translation\Comparison\CatalogueComparator;
+use MWEB\TranslationBundle\Util\FileUtils;
+use MWEB\TranslationBundle\Exception\RuntimeException;
+use MWEB\TranslationBundle\Model\MessageCatalogue;
+use MWEB\TranslationBundle\Model\Message;
+use MWEB\TranslationBundle\Translation\Comparison\CatalogueComparator;
 use Symfony\Component\HttpKernel\Log\LoggerInterface;
 use Symfony\Component\Translation\MessageCatalogue as SymfonyMessageCatalogue;
 use Symfony\Component\Finder\Finder;

@@ -16,9 +16,9 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Tests\Translation\Loader\Symfony;
+namespace MWEB\TranslationBundle\Tests\Translation\Loader\Symfony;
 
-use ZEN\TranslationBundle\Exception\InvalidArgumentException;
+use MWEB\TranslationBundle\Exception\InvalidArgumentException;
 use Symfony\Component\Translation\Loader\YamlFileLoader;
 
 class YamlLoaderTest extends BaseLoaderTest

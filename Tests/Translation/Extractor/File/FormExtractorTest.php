@@ -16,15 +16,15 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Tests\Translation\Extractor\File;
+namespace MWEB\TranslationBundle\Tests\Translation\Extractor\File;
 
-use ZEN\TranslationBundle\Exception\RuntimeException;
+use MWEB\TranslationBundle\Exception\RuntimeException;
 use Doctrine\Common\Annotations\DocParser;
 
-use ZEN\TranslationBundle\Translation\Extractor\File\FormExtractor;
-use ZEN\TranslationBundle\Model\FileSource;
-use ZEN\TranslationBundle\Model\Message;
-use ZEN\TranslationBundle\Model\MessageCatalogue;
+use MWEB\TranslationBundle\Translation\Extractor\File\FormExtractor;
+use MWEB\TranslationBundle\Model\FileSource;
+use MWEB\TranslationBundle\Model\Message;
+use MWEB\TranslationBundle\Model\MessageCatalogue;
 
 class FormExtractorTest extends \PHPUnit_Framework_TestCase
 {
@@ -228,9 +228,9 @@ class FormExtractorTest extends \PHPUnit_Framework_TestCase
     {
         $docParser = new DocParser();
         $docParser->setImports(array(
-            'desc' => 'ZEN\TranslationBundle\Annotation\Desc',
-            'meaning' => 'ZEN\TranslationBundle\Annotation\Meaning',
-            'ignore' => 'ZEN\TranslationBundle\Annotation\Ignore',
+            'desc' => 'MWEB\TranslationBundle\Annotation\Desc',
+            'meaning' => 'MWEB\TranslationBundle\Annotation\Meaning',
+            'ignore' => 'MWEB\TranslationBundle\Annotation\Ignore',
         ));
         $docParser->setIgnoreNotImportedAnnotations(true);
 

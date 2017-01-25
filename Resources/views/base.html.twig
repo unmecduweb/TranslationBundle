@@ -2,10 +2,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>{% block title %}ZENTranslationBundle UI{% endblock %}</title>
-        {# <link rel="stylesheet" type="text/css" media="screen" href="{{ asset("bundles/zentranslation/css/bootstrap.css") }}" />
-         <link rel="stylesheet" type="text/css" media="screen" href="{{ asset("bundles/zentranslation/css/layout.css") }}" />#}
-        {% stylesheets 'bundles/zentranslation/css/*' filter='cssrewrite' %}
+        <title>{% block title %}MWEBTranslationBundle UI{% endblock %}</title>
+        {# <link rel="stylesheet" type="text/css" media="screen" href="{{ asset("bundles/mwebtranslation/css/bootstrap.css") }}" />
+         <link rel="stylesheet" type="text/css" media="screen" href="{{ asset("bundles/mwebtranslation/css/layout.css") }}" />#}
+        {% stylesheets 'bundles/mwebtranslation/css/*' filter='cssrewrite' %}
         <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
         {% endstylesheets %}
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
@@ -15,10 +15,10 @@
     <div class="topbar">
         <div class="topbar-inner">
             <div class="container">
-                <h3><a href="{{ path("zen_translation_index") }}" class="logo">ZENTranslationBundle UI</a></h3>
+                <h3><a href="{{ path("mweb_translation_index") }}" class="logo">MWEBTranslationBundle UI</a></h3>
                 <ul class="nav">
-                    <li><a href="{{ path("zen_translation_delete_domain") }}">Supprimer un domain</a></li>
-                    <li><a target="_blank" href="{{ path("zen_translation_cache_clear") }}">Vider la cache</a></li>
+                    <li><a href="{{ path("mweb_translation_delete_domain") }}">Supprimer un domain</a></li>
+                    <li><a target="_blank" href="{{ path("mweb_translation_cache_clear") }}">Vider la cache</a></li>
                 </ul>
             </div>
         </div>
@@ -28,10 +28,10 @@
 </div>
 
 {% block javascripts %}
-    {% javascripts 'bundles/zentranslation/js/*' %}
+    {% javascripts 'bundles/mwebtranslation/js/*' %}
     <script type="text/javascript" src="{{ asset_url }}"></script>
     {% endjavascripts %}
-    {#    <script language="javascript" type="text/javascript" src="{{ asset("bundles/zentranslation/js/jquery.js") }}"></script>#}
+    {#    <script language="javascript" type="text/javascript" src="{{ asset("bundles/mwebtranslation/js/jquery.js") }}"></script>#}
 {% endblock %}
 </body>
 </html>

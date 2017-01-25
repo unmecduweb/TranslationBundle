@@ -16,13 +16,13 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Tests\Translation\Extractor\File;
+namespace MWEB\TranslationBundle\Tests\Translation\Extractor\File;
 
-use ZEN\TranslationBundle\Exception\RuntimeException;
-use ZEN\TranslationBundle\Model\FileSource;
-use ZEN\TranslationBundle\Model\Message;
-use ZEN\TranslationBundle\Translation\Extractor\File\TranslationContainerExtractor;
-use ZEN\TranslationBundle\Model\MessageCatalogue;
+use MWEB\TranslationBundle\Exception\RuntimeException;
+use MWEB\TranslationBundle\Model\FileSource;
+use MWEB\TranslationBundle\Model\Message;
+use MWEB\TranslationBundle\Translation\Extractor\File\TranslationContainerExtractor;
+use MWEB\TranslationBundle\Model\MessageCatalogue;
 
 class TranslationContainerExtractorTest extends \PHPUnit_Framework_TestCase
 {

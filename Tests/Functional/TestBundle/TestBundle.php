@@ -1,6 +1,6 @@
 <?php
 
-namespace ZEN\TranslationBundle\Tests\Functional\TestBundle;
+namespace MWEB\TranslationBundle\Tests\Functional\TestBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

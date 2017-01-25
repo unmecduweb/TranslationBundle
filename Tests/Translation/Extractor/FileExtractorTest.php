@@ -16,26 +16,26 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Tests\Translation\Extractor;
+namespace MWEB\TranslationBundle\Tests\Translation\Extractor;
 
 use Symfony\Component\HttpKernel\Log\NullLogger;
 use Doctrine\Common\Annotations\DocParser;
-use ZEN\TranslationBundle\Translation\Extractor\File\FormExtractor;
+use MWEB\TranslationBundle\Translation\Extractor\File\FormExtractor;
 use Doctrine\Common\Annotations\AnnotationReader;
 use Symfony\Component\Validator\Mapping\Loader\AnnotationLoader;
 use Symfony\Component\Validator\Mapping\ClassMetadataFactory;
-use ZEN\TranslationBundle\Translation\Extractor\File\ValidationExtractor;
-use ZEN\TranslationBundle\Model\FileSource;
-use ZEN\TranslationBundle\Model\Message;
-use ZEN\TranslationBundle\Model\MessageCatalogue;
-use ZEN\TranslationBundle\Translation\Extractor\File\TwigFileExtractor;
-use ZEN\TranslationBundle\Translation\Extractor\File\TranslationContainerExtractor;
-use ZEN\TranslationBundle\Translation\Extractor\File\DefaultPhpFileExtractor;
+use MWEB\TranslationBundle\Translation\Extractor\File\ValidationExtractor;
+use MWEB\TranslationBundle\Model\FileSource;
+use MWEB\TranslationBundle\Model\Message;
+use MWEB\TranslationBundle\Model\MessageCatalogue;
+use MWEB\TranslationBundle\Translation\Extractor\File\TwigFileExtractor;
+use MWEB\TranslationBundle\Translation\Extractor\File\TranslationContainerExtractor;
+use MWEB\TranslationBundle\Translation\Extractor\File\DefaultPhpFileExtractor;
 use Symfony\Component\Translation\MessageSelector;
 use Symfony\Component\Translation\IdentityTranslator;
 use Symfony\Bridge\Twig\Extension\TranslationExtension as SymfonyTranslationExtension;
-use ZEN\TranslationBundle\Twig\TranslationExtension;
-use ZEN\TranslationBundle\Translation\Extractor\FileExtractor;
+use MWEB\TranslationBundle\Twig\TranslationExtension;
+use MWEB\TranslationBundle\Translation\Extractor\FileExtractor;
 
 class FileExtractorTest extends \PHPUnit_Framework_TestCase
 {
@@ -95,9 +95,9 @@ class FileExtractorTest extends \PHPUnit_Framework_TestCase
 
         $docParser = new DocParser();
         $docParser->setImports(array(
-                        'desc' => 'ZEN\TranslationBundle\Annotation\Desc',
-                        'meaning' => 'ZEN\TranslationBundle\Annotation\Meaning',
-                        'ignore' => 'ZEN\TranslationBundle\Annotation\Ignore',
+                        'desc' => 'MWEB\TranslationBundle\Annotation\Desc',
+                        'meaning' => 'MWEB\TranslationBundle\Annotation\Meaning',
+                        'ignore' => 'MWEB\TranslationBundle\Annotation\Ignore',
         ));
         $docParser->setIgnoreNotImportedAnnotations(true);
 

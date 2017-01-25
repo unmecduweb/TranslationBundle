@@ -16,16 +16,16 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Tests\Translation;
+namespace MWEB\TranslationBundle\Tests\Translation;
 
-use ZEN\TranslationBundle\Model\Message;
+use MWEB\TranslationBundle\Model\Message;
 
-use ZEN\TranslationBundle\Model\MessageCatalogue;
+use MWEB\TranslationBundle\Model\MessageCatalogue;
 
 use Symfony\Component\HttpKernel\Log\NullLogger;
 
-use ZEN\TranslationBundle\Translation\Extractor\FileExtractor;
-use ZEN\TranslationBundle\Translation\ExtractorManager;
+use MWEB\TranslationBundle\Translation\Extractor\FileExtractor;
+use MWEB\TranslationBundle\Translation\ExtractorManager;
 
 class ExtractorManagerTest extends \PHPUnit_Framework_TestCase
 {
@@ -41,7 +41,7 @@ class ExtractorManagerTest extends \PHPUnit_Framework_TestCase
 
     public function testOnlySomeExtractorsEnabled()
     {
-        $foo = $this->getMock('ZEN\TranslationBundle\Translation\ExtractorInterface');
+        $foo = $this->getMock('MWEB\TranslationBundle\Translation\ExtractorInterface');
         $foo
             ->expects($this->never())
             ->method('extract')
@@ -49,7 +49,7 @@ class ExtractorManagerTest extends \PHPUnit_Framework_TestCase
 
         $catalogue = new MessageCatalogue();
         $catalogue->add(new Message('foo'));
-        $bar = $this->getMock('ZEN\TranslationBundle\Translation\ExtractorInterface');
+        $bar = $this->getMock('MWEB\TranslationBundle\Translation\ExtractorInterface');
         $bar
             ->expects($this->once())
             ->method('extract')
@@ -67,7 +67,7 @@ class ExtractorManagerTest extends \PHPUnit_Framework_TestCase
 
     public function testReset()
     {
-        $foo = $this->getMock('ZEN\TranslationBundle\Translation\ExtractorInterface');
+        $foo = $this->getMock('MWEB\TranslationBundle\Translation\ExtractorInterface');
         $logger = new NullLogger();
 
         $extractor = new FileExtractor(new \Twig_Environment(), $logger, array());

@@ -16,13 +16,13 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Tests\Translation\Extractor\File;
+namespace MWEB\TranslationBundle\Tests\Translation\Extractor\File;
 
-use ZEN\TranslationBundle\Model\MessageCatalogue;
+use MWEB\TranslationBundle\Model\MessageCatalogue;
 
 use Doctrine\Common\Annotations\DocParser;
 
-use ZEN\TranslationBundle\Translation\Extractor\FileVisitorInterface;
+use MWEB\TranslationBundle\Translation\Extractor\FileVisitorInterface;
 
 abstract class BasePhpFileExtractorTest extends \PHPUnit_Framework_TestCase
 {
@@ -53,9 +53,9 @@ abstract class BasePhpFileExtractorTest extends \PHPUnit_Framework_TestCase
     {
         $docParser = new DocParser();
         $docParser->setImports(array(
-            'desc' => 'ZEN\TranslationBundle\Annotation\Desc',
-            'meaning' => 'ZEN\TranslationBundle\Annotation\Meaning',
-            'ignore' => 'ZEN\TranslationBundle\Annotation\Ignore',
+            'desc' => 'MWEB\TranslationBundle\Annotation\Desc',
+            'meaning' => 'MWEB\TranslationBundle\Annotation\Meaning',
+            'ignore' => 'MWEB\TranslationBundle\Annotation\Ignore',
         ));
         $docParser->setIgnoreNotImportedAnnotations(true);
 

@@ -14,8 +14,8 @@ This bundle makes use of annotation configuration for routes, you can include
 the routes by adding the following to ``app/config/routing_dev.yml`` (note
 that you need to have the SensioFrameworkExtraBundle_ installed)::
 
-    ZENTranslationBundle_ui:
-        resource: @ZENTranslationBundle/Controller/
+    MWEBTranslationBundle_ui:
+        resource: @MWEBTranslationBundle/Controller/
         type:     annotation
         prefix:   /_trans
 

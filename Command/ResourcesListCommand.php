@@ -16,12 +16,12 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Command;
+namespace MWEB\TranslationBundle\Command;
 
-use ZEN\TranslationBundle\Translation\ConfigBuilder;
-use ZEN\TranslationBundle\Exception\RuntimeException;
-use ZEN\TranslationBundle\Translation\Config;
-use ZEN\TranslationBundle\Logger\OutputLogger;
+use MWEB\TranslationBundle\Translation\ConfigBuilder;
+use MWEB\TranslationBundle\Exception\RuntimeException;
+use MWEB\TranslationBundle\Translation\Config;
+use MWEB\TranslationBundle\Logger\OutputLogger;
 
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputInterface;
@@ -29,7 +29,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Finder\Finder;
-use ZEN\TranslationBundle\Util\FileUtils;
+use MWEB\TranslationBundle\Util\FileUtils;
 
 
 /**

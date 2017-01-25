@@ -16,21 +16,21 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Tests\Translation\Extractor\File;
+namespace MWEB\TranslationBundle\Tests\Translation\Extractor\File;
 
-use ZEN\TranslationBundle\Exception\RuntimeException;
+use MWEB\TranslationBundle\Exception\RuntimeException;
 use Doctrine\Common\Annotations\AnnotationReader;
 
 use Symfony\Component\Validator\Mapping\Loader\AnnotationLoader;
 
 use Symfony\Component\Validator\Mapping\ClassMetadataFactory;
 
-use ZEN\TranslationBundle\Translation\Extractor\File\ValidationExtractor;
+use MWEB\TranslationBundle\Translation\Extractor\File\ValidationExtractor;
 use Doctrine\Common\Annotations\DocParser;
-use ZEN\TranslationBundle\Translation\Extractor\File\FormExtractor;
-use ZEN\TranslationBundle\Model\FileSource;
-use ZEN\TranslationBundle\Model\Message;
-use ZEN\TranslationBundle\Model\MessageCatalogue;
+use MWEB\TranslationBundle\Translation\Extractor\File\FormExtractor;
+use MWEB\TranslationBundle\Model\FileSource;
+use MWEB\TranslationBundle\Model\Message;
+use MWEB\TranslationBundle\Model\MessageCatalogue;
 
 class ValidationExtractorTest extends \PHPUnit_Framework_TestCase
 {

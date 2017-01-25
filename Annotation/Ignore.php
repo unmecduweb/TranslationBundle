@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Annotation;
+namespace MWEB\TranslationBundle\Annotation;
 
 /**
  * @Annotation

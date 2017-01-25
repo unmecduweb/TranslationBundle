@@ -16,13 +16,13 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Command;
+namespace MWEB\TranslationBundle\Command;
 
-use ZEN\TranslationBundle\Translation\ConfigBuilder;
-use ZEN\TranslationBundle\Exception\RuntimeException;
+use MWEB\TranslationBundle\Translation\ConfigBuilder;
+use MWEB\TranslationBundle\Exception\RuntimeException;
 use Symfony\Component\Console\Input\InputArgument;
-use ZEN\TranslationBundle\Translation\Config;
-use ZEN\TranslationBundle\Logger\OutputLogger;
+use MWEB\TranslationBundle\Translation\Config;
+use MWEB\TranslationBundle\Logger\OutputLogger;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -62,14 +62,14 @@ class ExtractTranslationCommand extends ContainerAwareCommand
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $builder = $input->getOption('config') ?
-                       $this->getContainer()->get('zen_translation.config_factory')->getBuilder($input->getOption('config'))
+                       $this->getContainer()->get('mweb_translation.config_factory')->getBuilder($input->getOption('config'))
                        : new ConfigBuilder();
 
         $this->updateWithInput($input, $builder);
 
         $locales = $input->getArgument('locales');
         if (empty($locales)) {
-            $locales = $this->getContainer()->getParameter('zen_translation.locales');
+            $locales = $this->getContainer()->getParameter('mweb_translation.locales');
         }
 
         if (empty($locales)) {
@@ -89,7 +89,7 @@ class ExtractTranslationCommand extends ContainerAwareCommand
             $output->writeln(sprintf('Custom Extractors: <info>%s</info>', $config->getEnabledExtractors() ? implode(', ', array_keys($config->getEnabledExtractors())) : '# none #'));
             $output->writeln('============================================================');
 
-            $updater = $this->getContainer()->get('zen_translation.updater');
+            $updater = $this->getContainer()->get('mweb_translation.updater');
             $updater->setLogger($logger = new OutputLogger($output));
 
             if (!$input->getOption('verbose')) {

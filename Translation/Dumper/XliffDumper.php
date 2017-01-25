@@ -16,11 +16,11 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Translation\Dumper;
+namespace MWEB\TranslationBundle\Translation\Dumper;
 
-use ZEN\TranslationBundle\Model\FileSource;
-use ZEN\TranslationBundle\ZENTranslationBundle;
-use ZEN\TranslationBundle\Model\MessageCatalogue;
+use MWEB\TranslationBundle\Model\FileSource;
+use MWEB\TranslationBundle\MWEBTranslationBundle;
+use MWEB\TranslationBundle\Model\MessageCatalogue;
 
 /**
  * XLIFF dumper.
@@ -50,7 +50,7 @@ class XliffDumper implements DumperInterface {
     }
 
     /**
-     * @param \ZEN\TranslationBundle\Model\MessageCatalogue $domain
+     * @param \MWEB\TranslationBundle\Model\MessageCatalogue $domain
      * @return string
      */
     public function dump(MessageCatalogue $catalogue, $domain = 'messages') {
@@ -77,9 +77,9 @@ class XliffDumper implements DumperInterface {
         $file->appendChild($header = $doc->createElement('header'));
 
         $header->appendChild($tool = $doc->createElement('tool'));
-        $tool->setAttribute('tool-id', 'ZENTranslationBundle');
-        $tool->setAttribute('tool-name', 'ZENTranslationBundle');
-        $tool->setAttribute('tool-version', ZENTranslationBundle::VERSION);
+        $tool->setAttribute('tool-id', 'MWEBTranslationBundle');
+        $tool->setAttribute('tool-name', 'MWEBTranslationBundle');
+        $tool->setAttribute('tool-version', MWEBTranslationBundle::VERSION);
 
 
         $header->appendChild($note = $doc->createElement('note'));

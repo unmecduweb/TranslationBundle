@@ -16,9 +16,9 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Model;
+namespace MWEB\TranslationBundle\Model;
 
-use ZEN\TranslationBundle\Exception\InvalidArgumentException;
+use MWEB\TranslationBundle\Exception\InvalidArgumentException;
 
 /**
  * Represents a collection of **extracted** messages for a specific domain.
@@ -85,7 +85,7 @@ class MessageCollection
     /**
      * @param $id
      * @return mixed
-     * @throws \ZEN\TranslationBundle\Exception\InvalidArgumentException
+     * @throws \MWEB\TranslationBundle\Exception\InvalidArgumentException
      */
     public function get($id)
     {
@@ -107,7 +107,7 @@ class MessageCollection
 
     /**
      * @param $callback
-     * @throws \ZEN\TranslationBundle\Exception\InvalidArgumentException
+     * @throws \MWEB\TranslationBundle\Exception\InvalidArgumentException
      */
     public function sort($callback)
     {
@@ -120,7 +120,7 @@ class MessageCollection
 
     /**
      * @param $callback
-     * @throws \ZEN\TranslationBundle\Exception\InvalidArgumentException
+     * @throws \MWEB\TranslationBundle\Exception\InvalidArgumentException
      */
     public function filter($callback)
     {

@@ -16,9 +16,9 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Translation;
+namespace MWEB\TranslationBundle\Translation;
 
-use ZEN\TranslationBundle\Model\Message;
+use MWEB\TranslationBundle\Model\Message;
 
 /**
  * Translation Container Interface.

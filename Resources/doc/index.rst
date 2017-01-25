@@ -1,4 +1,4 @@
-ZENTranslationBundle
+MWEBTranslationBundle
 ====================
 
 Introduction

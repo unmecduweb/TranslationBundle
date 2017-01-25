@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Tests\Translation\Extractor\Fixture\SimpleTest\Controller;
+namespace MWEB\TranslationBundle\Tests\Translation\Extractor\Fixture\SimpleTest\Controller;
 
 class DefaultController
 {

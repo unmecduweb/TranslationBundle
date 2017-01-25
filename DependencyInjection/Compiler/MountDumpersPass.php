@@ -16,9 +16,9 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\DependencyInjection\Compiler;
+namespace MWEB\TranslationBundle\DependencyInjection\Compiler;
 
-use ZEN\TranslationBundle\Exception\RuntimeException;
+use MWEB\TranslationBundle\Exception\RuntimeException;
 use Symfony\Component\DependencyInjection\DefinitionDecorator;
 use Symfony\Component\DependencyInjection\Reference;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -28,7 +28,7 @@ class MountDumpersPass implements CompilerPassInterface
 {
     public function process(ContainerBuilder $container)
     {
-        if (!$container->hasDefinition('zen_translation.file_writer')) {
+        if (!$container->hasDefinition('mweb_translation.file_writer')) {
             return;
         }
 
@@ -39,23 +39,23 @@ class MountDumpersPass implements CompilerPassInterface
                 throw new RuntimeException(sprintf('The "alias" attribute must be set for tag "translation.dumper" for service "%s".', $id));
             }
 
-            $def = new DefinitionDecorator('zen_translation.dumper.symfony_adapter');
+            $def = new DefinitionDecorator('mweb_translation.dumper.symfony_adapter');
             $def->addArgument(new Reference($id))->addArgument($attr[0]['alias']);
-            $container->setDefinition($id = 'zen_translation.dumper.wrapped_symfony_dumper.'.($i++), $def);
+            $container->setDefinition($id = 'mweb_translation.dumper.wrapped_symfony_dumper.'.($i++), $def);
 
             $dumpers[$attr[0]['alias']] = new Reference($id);
         }
 
-        foreach ($container->findTaggedServiceIds('zen_translation.dumper') as $id => $attr) {
+        foreach ($container->findTaggedServiceIds('mweb_translation.dumper') as $id => $attr) {
             if (!isset($attr[0]['format'])) {
-                throw new RuntimeException(sprintf('The "format" attribute must be set for tag "zen_translation.dumper" for service "%s".', $id));
+                throw new RuntimeException(sprintf('The "format" attribute must be set for tag "mweb_translation.dumper" for service "%s".', $id));
             }
 
             $dumpers[$attr[0]['format']] = new Reference($id);
         }
 
         $container
-            ->getDefinition('zen_translation.file_writer')
+            ->getDefinition('mweb_translation.file_writer')
             ->addArgument($dumpers)
         ;
     }

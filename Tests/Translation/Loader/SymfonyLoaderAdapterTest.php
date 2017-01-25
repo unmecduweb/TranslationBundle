@@ -16,9 +16,9 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Tests\Translation\Loader;
+namespace MWEB\TranslationBundle\Tests\Translation\Loader;
 
-use ZEN\TranslationBundle\Translation\Loader\SymfonyLoaderAdapter;
+use MWEB\TranslationBundle\Translation\Loader\SymfonyLoaderAdapter;
 use Symfony\Component\Translation\MessageCatalogue;
 
 class SymfonyLoaderAdapterTest extends \PHPUnit_Framework_TestCase
@@ -36,7 +36,7 @@ class SymfonyLoaderAdapterTest extends \PHPUnit_Framework_TestCase
         
         $adapter = new SymfonyLoaderAdapter($symfonyLoader);
         $bundleCatalogue = $adapter->load('foo', 'en', 'messages');
-        $this->assertInstanceOf('ZEN\TranslationBundle\Model\MessageCatalogue', $bundleCatalogue);
+        $this->assertInstanceOf('MWEB\TranslationBundle\Model\MessageCatalogue', $bundleCatalogue);
         $this->assertEquals('en', $bundleCatalogue->getLocale());
         $this->assertTrue($bundleCatalogue->hasDomain('messages'));
         $this->assertTrue($bundleCatalogue->getDomain('messages')->has('foo'));

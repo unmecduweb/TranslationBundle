@@ -16,11 +16,11 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Tests\Model;
+namespace MWEB\TranslationBundle\Tests\Model;
 
-use ZEN\TranslationBundle\Model\Message;
-use ZEN\TranslationBundle\Model\MessageCollection;
-use ZEN\TranslationBundle\Model\FileSource;
+use MWEB\TranslationBundle\Model\Message;
+use MWEB\TranslationBundle\Model\MessageCollection;
+use MWEB\TranslationBundle\Model\FileSource;
 
 class MessageCollectionTest extends \PHPUnit_Framework_TestCase
 {
@@ -34,11 +34,11 @@ class MessageCollectionTest extends \PHPUnit_Framework_TestCase
 
     public function testAddMerges()
     {
-        $m2 = $this->getMockBuilder('ZEN\TranslationBundle\Model\Message')
+        $m2 = $this->getMockBuilder('MWEB\TranslationBundle\Model\Message')
             ->disableOriginalConstructor()
             ->getMock();
 
-        $m1 = $this->getMockBuilder('ZEN\TranslationBundle\Model\Message')
+        $m1 = $this->getMockBuilder('MWEB\TranslationBundle\Model\Message')
             ->disableOriginalConstructor()
             ->getMock();
         $m1->expects($this->once())
@@ -79,14 +79,14 @@ class MessageCollectionTest extends \PHPUnit_Framework_TestCase
 
     public function testSetDoesNotMerge()
     {
-        $m2 = $this->getMockBuilder('ZEN\TranslationBundle\Model\Message')
+        $m2 = $this->getMockBuilder('MWEB\TranslationBundle\Model\Message')
             ->disableOriginalConstructor()
             ->getMock();
         $m2->expects($this->any())
             ->method('getId')
             ->will($this->returnValue('foo'));
 
-        $m1 = $this->getMockBuilder('ZEN\TranslationBundle\Model\Message')
+        $m1 = $this->getMockBuilder('MWEB\TranslationBundle\Model\Message')
             ->disableOriginalConstructor()
             ->getMock();
         $m1->expects($this->never())

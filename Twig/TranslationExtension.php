@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Twig;
+namespace MWEB\TranslationBundle\Twig;
 
 /**
  * Provides some extensions for specifying translation metadata.
@@ -83,6 +83,6 @@ class TranslationExtension extends \Twig_Extension
 
     public function getName()
     {
-        return 'zen_translation';
+        return 'mweb_translation';
     }
 }

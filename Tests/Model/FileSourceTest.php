@@ -16,9 +16,9 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Tests\Model;
+namespace MWEB\TranslationBundle\Tests\Model;
 
-use ZEN\TranslationBundle\Model\FileSource;
+use MWEB\TranslationBundle\Model\FileSource;
 
 class FileSourceTest extends \PHPUnit_Framework_TestCase
 {
@@ -101,7 +101,7 @@ class FileSourceTest extends \PHPUnit_Framework_TestCase
             false,
         );
 
-        $source = $this->getMock('ZEN\TranslationBundle\Model\SourceInterface');
+        $source = $this->getMock('MWEB\TranslationBundle\Model\SourceInterface');
         $source
             ->expects($this->once())
             ->method('equals')

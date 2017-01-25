@@ -16,9 +16,9 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Twig;
+namespace MWEB\TranslationBundle\Twig;
 
-use ZEN\TranslationBundle\Exception\RuntimeException;
+use MWEB\TranslationBundle\Exception\RuntimeException;
 
 /**
  * Applies the value of the "desc" filter if the "trans" filter has no
@@ -73,7 +73,7 @@ class DefaultApplyingNodeVisitor implements \Twig_NodeVisitorInterface
                 }
 
                 $transchoiceNode = new \Twig_Node_Expression_MethodCall(
-                    new \Twig_Node_Expression_ExtensionReference('zen_translation', $transNode->getLine()),
+                    new \Twig_Node_Expression_ExtensionReference('mweb_translation', $transNode->getLine()),
                     'transchoiceWithDefault', $transchoiceArguments, $transNode->getLine());
                 $node->setNode('node', $transchoiceNode);
 

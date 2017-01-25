@@ -16,10 +16,10 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Translation;
+namespace MWEB\TranslationBundle\Translation;
 
-use ZEN\TranslationBundle\Exception\InvalidArgumentException;
-use ZEN\TranslationBundle\Exception\RuntimeException;
+use MWEB\TranslationBundle\Exception\InvalidArgumentException;
+use MWEB\TranslationBundle\Exception\RuntimeException;
 
 /**
  * Configuration.

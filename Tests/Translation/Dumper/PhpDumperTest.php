@@ -16,12 +16,12 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Tests\Translation\Dumper;
+namespace MWEB\TranslationBundle\Tests\Translation\Dumper;
 
-use ZEN\TranslationBundle\Exception\InvalidArgumentException;
-use ZEN\TranslationBundle\Model\Message;
-use ZEN\TranslationBundle\Model\MessageCatalogue;
-use ZEN\TranslationBundle\Translation\Dumper\PhpDumper;
+use MWEB\TranslationBundle\Exception\InvalidArgumentException;
+use MWEB\TranslationBundle\Model\Message;
+use MWEB\TranslationBundle\Model\MessageCatalogue;
+use MWEB\TranslationBundle\Translation\Dumper\PhpDumper;
 
 class PhpDumperTest extends BaseDumperTest
 {

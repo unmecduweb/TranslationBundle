@@ -16,10 +16,10 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Tests\Translation\Extractor\Fixture\SimpleTest\Form;
+namespace MWEB\TranslationBundle\Tests\Translation\Extractor\Fixture\SimpleTest\Form;
 
-use ZEN\TranslationBundle\Model\Message;
-use ZEN\TranslationBundle\Translation\TranslationContainerInterface;
+use MWEB\TranslationBundle\Model\Message;
+use MWEB\TranslationBundle\Translation\TranslationContainerInterface;
 
 class FormModel implements TranslationContainerInterface
 {

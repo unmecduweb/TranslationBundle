@@ -16,12 +16,12 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Controller;
+namespace MWEB\TranslationBundle\Controller;
 
-use ZEN\TranslationBundle\Exception\RuntimeException;
-use ZEN\TranslationBundle\Exception\InvalidArgumentException;
+use MWEB\TranslationBundle\Exception\RuntimeException;
+use MWEB\TranslationBundle\Exception\InvalidArgumentException;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use ZEN\TranslationBundle\Util\FileUtils;
+use MWEB\TranslationBundle\Util\FileUtils;
 use JMS\DiExtraBundle\Annotation as DI;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
@@ -42,20 +42,20 @@ class TranslateController extends Controller {
     /** @DI\Inject */
     private $request;
 
-    /** @DI\Inject("zen_translation.config_factory") */
+    /** @DI\Inject("mweb_translation.config_factory") */
     private $configFactory;
 
-    /** @DI\Inject("zen_translation.loader_manager") */
+    /** @DI\Inject("mweb_translation.loader_manager") */
     private $loader;
 
     /** @DI\Inject("service_container") */
     protected $container;
 
-    /** @DI\Inject("%zen_translation.source_language%") */
+    /** @DI\Inject("%mweb_translation.source_language%") */
     private $sourceLanguage;
 
     /**
-     * @Route("/", name="zen_translation_index", options = {"i18n" = false})
+     * @Route("/", name="mweb_translation_index", options = {"i18n" = false})
      * @Template
      * @param string $config
      */
@@ -63,7 +63,7 @@ class TranslateController extends Controller {
         $configs = $this->configFactory->getNames();
         $config = $this->request->query->get('config') ? : reset($configs);
         if (!$config) {
-            throw new RuntimeException('You need to configure at least one config under "zen_translation.configs".');
+            throw new RuntimeException('You need to configure at least one config under "mweb_translation.configs".');
         }
 
         $translationsDir = $this->configFactory->getConfig($config, 'en')->getTranslationsDir();
@@ -176,13 +176,13 @@ class TranslateController extends Controller {
     }
 
     /**
-     * @Route("/delete-domain", name="zen_translation_delete_domain", options = {"i18n" = false})
+     * @Route("/delete-domain", name="mweb_translation_delete_domain", options = {"i18n" = false})
      */
     public function deleteDomainAction(Request $request) {
         $configs = $this->configFactory->getNames();
         $config = $this->request->query->get('config') ? : reset($configs);
         if (!$config) {
-            throw new RuntimeException('You need to configure at least one config under "zen_translation.configs".');
+            throw new RuntimeException('You need to configure at least one config under "mweb_translation.configs".');
         }
         $translationsDir = $this->configFactory->getConfig($config, 'en')->getTranslationsDir();
         $files = FileUtils::findTranslationFiles($translationsDir);
@@ -221,13 +221,13 @@ class TranslateController extends Controller {
                 echo "Impossible de supprimer le fichier (inexistant ?)";
             }
 
-            $url = $this->get('router')->generate('zen_translation_delete_domain');
+            $url = $this->get('router')->generate('mweb_translation_delete_domain');
             return $this->redirect($url);
         }
 
 
 
-        return $this->render('ZENTranslationBundle:Translate:delete.html.twig', array(
+        return $this->render('MWEBTranslationBundle:Translate:delete.html.twig', array(
                     'selectedConfig' => $config,
                     'configs' => $configs,
                     'selectedDomain' => $domain,
@@ -243,7 +243,7 @@ class TranslateController extends Controller {
     
     
     /**
-     * @Route("/clear-cache", name="zen_translation_cache_clear", options = {"i18n" = false})
+     * @Route("/clear-cache", name="mweb_translation_cache_clear", options = {"i18n" = false})
      */
     public function clearCacheAction(Request $request){
         
@@ -259,7 +259,7 @@ class TranslateController extends Controller {
             $response->setContent(json_encode($output));
             return $response;
         } else {
-            $url = $this->get('router')->generate('zen_translation_index');
+            $url = $this->get('router')->generate('mweb_translation_index');
             return new RedirectResponse($url);
         }
     }

@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Util;
+namespace MWEB\TranslationBundle\Util;
 
 use Symfony\Component\Finder\Finder;
 

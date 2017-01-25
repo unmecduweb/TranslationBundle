@@ -16,14 +16,14 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Translation\Dumper;
+namespace MWEB\TranslationBundle\Translation\Dumper;
 
-use ZEN\TranslationBundle\Exception\RuntimeException;
+use MWEB\TranslationBundle\Exception\RuntimeException;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Translation\MessageCatalogue as SymfonyCatalogue;
 use Symfony\Component\Translation\Dumper\DumperInterface as SymfonyDumper;
 
-use ZEN\TranslationBundle\Model\MessageCatalogue;
+use MWEB\TranslationBundle\Model\MessageCatalogue;
 
 /**
  * Adapter for Symfony's dumpers.

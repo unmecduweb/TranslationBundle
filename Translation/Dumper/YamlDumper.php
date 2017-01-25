@@ -16,10 +16,10 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Translation\Dumper;
+namespace MWEB\TranslationBundle\Translation\Dumper;
 
-use ZEN\TranslationBundle\Util\Writer;
-use ZEN\TranslationBundle\Model\Message;
+use MWEB\TranslationBundle\Util\Writer;
+use MWEB\TranslationBundle\Model\Message;
 use Symfony\Component\Yaml\Inline;
 
 class YamlDumper extends ArrayStructureDumper

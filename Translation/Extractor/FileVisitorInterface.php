@@ -16,9 +16,9 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Translation\Extractor;
+namespace MWEB\TranslationBundle\Translation\Extractor;
 
-use ZEN\TranslationBundle\Model\MessageCatalogue;
+use MWEB\TranslationBundle\Model\MessageCatalogue;
 
 /**
  * File Visitor Interface.

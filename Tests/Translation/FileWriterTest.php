@@ -16,17 +16,17 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Tests\Translation;
+namespace MWEB\TranslationBundle\Tests\Translation;
 
-use ZEN\TranslationBundle\Model\Message;
-use ZEN\TranslationBundle\Model\MessageCatalogue;
-use ZEN\TranslationBundle\Translation\FileWriter;
+use MWEB\TranslationBundle\Model\Message;
+use MWEB\TranslationBundle\Model\MessageCatalogue;
+use MWEB\TranslationBundle\Translation\FileWriter;
 
 class FileWriterTest extends \PHPUnit_Framework_TestCase
 {
     public function testCatalogueIsSortedBeforeBeingDumped()
     {
-        $dumper = $this->getMock('ZEN\TranslationBundle\Translation\Dumper\DumperInterface');
+        $dumper = $this->getMock('MWEB\TranslationBundle\Translation\Dumper\DumperInterface');
 
         $self = $this;
         $dumper

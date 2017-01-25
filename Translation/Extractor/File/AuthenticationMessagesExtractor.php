@@ -16,18 +16,18 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Translation\Extractor\File;
+namespace MWEB\TranslationBundle\Translation\Extractor\File;
 
-use ZEN\TranslationBundle\Exception\RuntimeException;
-use ZEN\TranslationBundle\Model\FileSource;
-use ZEN\TranslationBundle\Model\Message;
-use ZEN\TranslationBundle\Annotation\Meaning;
-use ZEN\TranslationBundle\Annotation\Desc;
-use ZEN\TranslationBundle\Annotation\Ignore;
-use ZEN\TranslationBundle\Model\MessageCatalogue;
-use ZEN\TranslationBundle\Translation\Extractor\FileVisitorInterface;
+use MWEB\TranslationBundle\Exception\RuntimeException;
+use MWEB\TranslationBundle\Model\FileSource;
+use MWEB\TranslationBundle\Model\Message;
+use MWEB\TranslationBundle\Annotation\Meaning;
+use MWEB\TranslationBundle\Annotation\Desc;
+use MWEB\TranslationBundle\Annotation\Ignore;
+use MWEB\TranslationBundle\Model\MessageCatalogue;
+use MWEB\TranslationBundle\Translation\Extractor\FileVisitorInterface;
 use Doctrine\Common\Annotations\DocParser;
-use ZEN\TranslationBundle\Logger\LoggerAwareInterface;
+use MWEB\TranslationBundle\Logger\LoggerAwareInterface;
 use Symfony\Component\HttpKernel\Log\LoggerInterface;
 
 class AuthenticationMessagesExtractor implements LoggerAwareInterface, FileVisitorInterface, \PHPParser_NodeVisitor

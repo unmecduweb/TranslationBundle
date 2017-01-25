@@ -16,11 +16,11 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Tests\Model;
+namespace MWEB\TranslationBundle\Tests\Model;
 
-use ZEN\TranslationBundle\Model\FileSource;
+use MWEB\TranslationBundle\Model\FileSource;
 
-use ZEN\TranslationBundle\Model\Message;
+use MWEB\TranslationBundle\Model\Message;
 
 class MessageTest extends \PHPUnit_Framework_TestCase
 {
@@ -28,7 +28,7 @@ class MessageTest extends \PHPUnit_Framework_TestCase
     {
         $message = Message::create('id', 'foo');
 
-        $this->assertInstanceOf('ZEN\TranslationBundle\Model\Message', $message);
+        $this->assertInstanceOf('MWEB\TranslationBundle\Model\Message', $message);
         $this->assertEquals('id', $message->getId());
         $this->assertEquals('foo', $message->getDomain());
     }
@@ -37,7 +37,7 @@ class MessageTest extends \PHPUnit_Framework_TestCase
     {
         $message = Message::forThisFile('foo', 'bar');
 
-        $this->assertInstanceOf('ZEN\TranslationBundle\Model\Message', $message);
+        $this->assertInstanceOf('MWEB\TranslationBundle\Model\Message', $message);
         $this->assertEquals('foo', $message->getId());
         $this->assertEquals('bar', $message->getDomain());
 
@@ -80,7 +80,7 @@ class MessageTest extends \PHPUnit_Framework_TestCase
         $message = new Message('foo');
         $this->assertEquals(array(), $message->getSources());
 
-        $this->assertSame($message, $message->addSource($source = $this->getMock('ZEN\TranslationBundle\Model\SourceInterface')));
+        $this->assertSame($message, $message->addSource($source = $this->getMock('MWEB\TranslationBundle\Model\SourceInterface')));
         $this->assertSame(array($source), $message->getSources());
     }
 
@@ -89,11 +89,11 @@ class MessageTest extends \PHPUnit_Framework_TestCase
         $message = new Message('foo');
         $message->setDesc('foo');
         $message->setMeaning('foo');
-        $message->addSource($s1 = $this->getMock('ZEN\TranslationBundle\Model\SourceInterface'));
+        $message->addSource($s1 = $this->getMock('MWEB\TranslationBundle\Model\SourceInterface'));
 
         $message2 = new Message('foo');
         $message2->setDesc('bar');
-        $message2->addSource($s2 = $this->getMock('ZEN\TranslationBundle\Model\SourceInterface'));
+        $message2->addSource($s2 = $this->getMock('MWEB\TranslationBundle\Model\SourceInterface'));
 
         $message->merge($message2);
 
@@ -107,11 +107,11 @@ class MessageTest extends \PHPUnit_Framework_TestCase
         $message = new Message('foo_id');
         $message->setDesc('foo_desc');
         $message->setMeaning('foo_meaning');
-        $message->addSource($s1 = $this->getMock('ZEN\TranslationBundle\Model\SourceInterface'));
+        $message->addSource($s1 = $this->getMock('MWEB\TranslationBundle\Model\SourceInterface'));
 
         $message2 = new Message('foo_id');
         $message2->setMeaning('bar_meaning');
-        $message2->addSource($s2 = $this->getMock('ZEN\TranslationBundle\Model\SourceInterface'));
+        $message2->addSource($s2 = $this->getMock('MWEB\TranslationBundle\Model\SourceInterface'));
 
         $message->merge($message2);
 
@@ -158,9 +158,9 @@ class MessageTest extends \PHPUnit_Framework_TestCase
     {
         $message = new Message('foo');
 
-        $s2 = $this->getMock('ZEN\TranslationBundle\Model\SourceInterface');
+        $s2 = $this->getMock('MWEB\TranslationBundle\Model\SourceInterface');
 
-        $s1 = $this->getMock('ZEN\TranslationBundle\Model\SourceInterface');
+        $s1 = $this->getMock('MWEB\TranslationBundle\Model\SourceInterface');
         $s1
             ->expects($this->once())
             ->method('equals')

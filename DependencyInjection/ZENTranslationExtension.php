@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\DependencyInjection;
+namespace MWEB\TranslationBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\Config\FileLocator;
@@ -24,7 +24,7 @@ use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
-class ZENTranslationExtension extends Extension
+class MWEBTranslationExtension extends Extension
 {
     public function load(array $configs, ContainerBuilder $container)
     {
@@ -33,12 +33,12 @@ class ZENTranslationExtension extends Extension
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
 
-        $container->setParameter('zen_translation.source_language', $config['source_language']);
-        $container->setParameter('zen_translation.locales', $config['locales']);
+        $container->setParameter('mweb_translation.source_language', $config['source_language']);
+        $container->setParameter('mweb_translation.locales', $config['locales']);
 
         $requests = array();
         foreach ($config['configs'] as $name => $extractConfig) {
-            $def = new Definition('ZEN\TranslationBundle\Translation\ConfigBuilder');
+            $def = new Definition('MWEB\TranslationBundle\Translation\ConfigBuilder');
             $def->addMethodCall('setTranslationsDir', array($extractConfig['output_dir']));
             $def->addMethodCall('setScanDirs', array($extractConfig['dirs']));
 
@@ -97,7 +97,7 @@ class ZENTranslationExtension extends Extension
         }
 
         $container
-            ->getDefinition('zen_translation.config_factory')
+            ->getDefinition('mweb_translation.config_factory')
             ->addArgument($requests)
         ;
     }

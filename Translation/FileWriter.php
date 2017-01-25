@@ -16,10 +16,10 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Translation;
+namespace MWEB\TranslationBundle\Translation;
 
-use ZEN\TranslationBundle\Exception\InvalidArgumentException;
-use ZEN\TranslationBundle\Model\MessageCatalogue;
+use MWEB\TranslationBundle\Exception\InvalidArgumentException;
+use MWEB\TranslationBundle\Model\MessageCatalogue;
 
 /**
  * Writes translation files.
@@ -42,10 +42,10 @@ class FileWriter {
     }
 
     /**
-     * @param \ZEN\TranslationBundle\Model\MessageCatalogue $domain
+     * @param \MWEB\TranslationBundle\Model\MessageCatalogue $domain
      * @param $filePath
      * @param $format
-     * @throws \ZEN\TranslationBundle\Exception\InvalidArgumentException
+     * @throws \MWEB\TranslationBundle\Exception\InvalidArgumentException
      */
     public function write(MessageCatalogue $catalogue, $domain, $filePath, $format) {
         if (!isset($this->dumpers[$format])) {

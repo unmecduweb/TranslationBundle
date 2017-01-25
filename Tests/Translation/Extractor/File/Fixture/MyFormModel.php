@@ -16,11 +16,11 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Tests\Translation\Extractor\File\Fixture;
+namespace MWEB\TranslationBundle\Tests\Translation\Extractor\File\Fixture;
 
-use ZEN\TranslationBundle\Model\FileSource;
-use ZEN\TranslationBundle\Model\Message;
-use ZEN\TranslationBundle\Translation\TranslationContainerInterface;
+use MWEB\TranslationBundle\Model\FileSource;
+use MWEB\TranslationBundle\Model\Message;
+use MWEB\TranslationBundle\Translation\TranslationContainerInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
 class MyFormModel implements TranslationContainerInterface

@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Logger;
+namespace MWEB\TranslationBundle\Logger;
 
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\HttpKernel\Log\LoggerInterface;

@@ -16,14 +16,14 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Controller;
+namespace MWEB\TranslationBundle\Controller;
 
-use ZEN\TranslationBundle\Exception\RuntimeException;
+use MWEB\TranslationBundle\Exception\RuntimeException;
 use Symfony\Component\HttpFoundation\Response;
 
-use ZEN\TranslationBundle\Translation\XliffMessageUpdater;
+use MWEB\TranslationBundle\Translation\XliffMessageUpdater;
 
-use ZEN\TranslationBundle\Util\FileUtils;
+use MWEB\TranslationBundle\Util\FileUtils;
 
 use JMS\DiExtraBundle\Annotation as DI;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -37,18 +37,18 @@ use Symfony\Component\HttpFoundation\Request;
  */
 class ApiController
 {
-    /** @DI\Inject("zen_translation.config_factory") */
+    /** @DI\Inject("mweb_translation.config_factory") */
     private $configFactory;
 
     /** @DI\Inject */
     private $request;
 
-    /** @DI\Inject("zen_translation.updater") */
+    /** @DI\Inject("mweb_translation.updater") */
     private $updater;
 
     /**
      * @Route("/configs/{config}/domains/{domain}/locales/{locale}/messages",
-     * 			name="zen_translation_update_message",
+     * 			name="mweb_translation_update_message",
      * 			defaults = {"id" = null},
      * 			options = {"i18n" = false})
      * @Method("PUT")
@@ -79,7 +79,7 @@ class ApiController
     }
     /**
      * @Route("/delete/configs/{config}/domains/{domain}/locales/{locale}/messages",
-     * 			name="zen_translation_delete_message",
+     * 			name="mweb_translation_delete_message",
      * 			defaults = {"id" = null},
      * 			options = {"i18n" = false})
      * @Method("PUT")
@@ -111,7 +111,7 @@ class ApiController
 
     /**
      * @Route("/add/configs/{config}/domains/{domain}/locales/{locale}/messages",
-     * 			name="zen_translation_add_message",
+     * 			name="mweb_translation_add_message",
      * 			defaults = {"id" = null},
      * 			options = {"i18n" = false})
      * @Method("PUT")

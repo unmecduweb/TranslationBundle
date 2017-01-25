@@ -16,10 +16,10 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Tests\Functional;
+namespace MWEB\TranslationBundle\Tests\Functional;
 
-use ZEN\TranslationBundle\Command\ExtractTranslationCommand;
-use ZEN\TranslationBundle\Util\FileUtils;
+use MWEB\TranslationBundle\Command\ExtractTranslationCommand;
+use MWEB\TranslationBundle\Util\FileUtils;
 use Symfony\Component\Console\Output\NullOutput;
 use Symfony\Component\Console\Input\ArgvInput;
 

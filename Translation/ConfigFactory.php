@@ -16,9 +16,9 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Translation;
+namespace MWEB\TranslationBundle\Translation;
 
-use ZEN\TranslationBundle\Exception\InvalidArgumentException;
+use MWEB\TranslationBundle\Exception\InvalidArgumentException;
 
 class ConfigFactory
 {

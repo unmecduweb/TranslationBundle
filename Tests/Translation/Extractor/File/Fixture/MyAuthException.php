@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Tests\Translation\Extractor\File\Fixture;
+namespace MWEB\TranslationBundle\Tests\Translation\Extractor\File\Fixture;
 
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
 

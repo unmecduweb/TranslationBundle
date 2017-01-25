@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\DependencyInjection\Compiler;
+namespace MWEB\TranslationBundle\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\Reference;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -26,13 +26,13 @@ class MountFileVisitorsPass implements CompilerPassInterface
 {
     public function process(ContainerBuilder $container)
     {
-        if (!$container->hasDefinition('zen_translation.extractor.file_extractor')) {
+        if (!$container->hasDefinition('mweb_translation.extractor.file_extractor')) {
             return;
         }
-        $def = $container->getDefinition('zen_translation.extractor.file_extractor');
+        $def = $container->getDefinition('mweb_translation.extractor.file_extractor');
 
         $visitors = array();
-        foreach ($container->findTaggedServiceIds('zen_translation.file_visitor') as $id => $attr) {
+        foreach ($container->findTaggedServiceIds('mweb_translation.file_visitor') as $id => $attr) {
             $visitors[] = new Reference($id);
         }
         $def->addArgument($visitors);

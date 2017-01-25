@@ -16,10 +16,10 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Translation\Loader;
+namespace MWEB\TranslationBundle\Translation\Loader;
 
-use ZEN\TranslationBundle\Model\MessageCatalogue;
-use ZEN\TranslationBundle\Model\Message;
+use MWEB\TranslationBundle\Model\MessageCatalogue;
+use MWEB\TranslationBundle\Model\Message;
 use Symfony\Component\Translation\Loader\LoaderInterface as SymfonyLoader;
 
 /**

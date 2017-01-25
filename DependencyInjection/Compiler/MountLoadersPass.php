@@ -16,9 +16,9 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\DependencyInjection\Compiler;
+namespace MWEB\TranslationBundle\DependencyInjection\Compiler;
 
-use ZEN\TranslationBundle\Exception\RuntimeException;
+use MWEB\TranslationBundle\Exception\RuntimeException;
 use Symfony\Component\DependencyInjection\Reference;
 use Symfony\Component\DependencyInjection\DefinitionDecorator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -28,7 +28,7 @@ class MountLoadersPass implements CompilerPassInterface
 {
     public function process(ContainerBuilder $container)
     {
-        if (!$container->hasDefinition(('zen_translation.loader_manager'))) {
+        if (!$container->hasDefinition(('mweb_translation.loader_manager'))) {
             return;
         }
 
@@ -39,23 +39,23 @@ class MountLoadersPass implements CompilerPassInterface
                 throw new RuntimeException(sprintf('The attribute "alias" must be defined for tag "translation.loader" for service "%s".', $id));
             }
 
-            $def = new DefinitionDecorator('zen_translation.loader.symfony_adapter');
+            $def = new DefinitionDecorator('mweb_translation.loader.symfony_adapter');
             $def->addArgument(new Reference($id));
-            $container->setDefinition($id = 'zen_translation.loader.wrapped_symfony_loader.'.($i++), $def);
+            $container->setDefinition($id = 'mweb_translation.loader.wrapped_symfony_loader.'.($i++), $def);
 
             $loaders[$attr[0]['alias']] = new Reference($id);
         }
 
-        foreach ($container->findTaggedServiceIds('zen_translation.loader') as $id => $attr) {
+        foreach ($container->findTaggedServiceIds('mweb_translation.loader') as $id => $attr) {
             if (!isset($attr[0]['format'])) {
-                throw new RuntimeException(sprintf('The attribute "format" must be defined for tag "zen_translation.loader" for service "%s".', $id));
+                throw new RuntimeException(sprintf('The attribute "format" must be defined for tag "mweb_translation.loader" for service "%s".', $id));
             }
 
             $loaders[$attr[0]['format']] = new Reference($id);
         }
 
         $container
-            ->getDefinition('zen_translation.loader_manager')
+            ->getDefinition('mweb_translation.loader_manager')
             ->addArgument($loaders)
         ;
     }

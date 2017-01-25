@@ -16,9 +16,9 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Model;
+namespace MWEB\TranslationBundle\Model;
 
-use ZEN\TranslationBundle\Exception\InvalidArgumentException;
+use MWEB\TranslationBundle\Exception\InvalidArgumentException;
 
 /**
  * Represents a collection of **extracted** messages.
@@ -89,7 +89,7 @@ class MessageCatalogue
     /**
      * @param $id
      * @param $domain
-     * @throws \ZEN\TranslationBundle\Exception\InvalidArgumentException
+     * @throws \MWEB\TranslationBundle\Exception\InvalidArgumentException
      * @return Message
      */
     public function get($id, $domain = 'messages')

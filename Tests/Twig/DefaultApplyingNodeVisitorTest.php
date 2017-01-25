@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Tests\Twig;
+namespace MWEB\TranslationBundle\Tests\Twig;
 
 class DefaultApplyingNodeVisitorTest extends BaseTwigTestCase
 {

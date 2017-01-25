@@ -16,14 +16,14 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Tests\Translation\Dumper;
+namespace MWEB\TranslationBundle\Tests\Translation\Dumper;
 
-use ZEN\TranslationBundle\Model\Message;
+use MWEB\TranslationBundle\Model\Message;
 
-use ZEN\TranslationBundle\Model\MessageCatalogue;
+use MWEB\TranslationBundle\Model\MessageCatalogue;
 
-use ZEN\TranslationBundle\Exception\InvalidArgumentException;
-use ZEN\TranslationBundle\Translation\Dumper\XliffDumper;
+use MWEB\TranslationBundle\Exception\InvalidArgumentException;
+use MWEB\TranslationBundle\Translation\Dumper\XliffDumper;
 
 class XliffDumperTest extends BaseDumperTest
 {
@@ -38,7 +38,7 @@ class XliffDumperTest extends BaseDumperTest
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:LI="urn:LI:translation" version="1.2">
   <file source-language="en" target-language="" datatype="plaintext" original="not.available">
     <header>
-      <tool tool-id="ZENTranslationBundle" tool-name="ZENTranslationBundle" tool-version="1.1.0-DEV"/>
+      <tool tool-id="MWEBTranslationBundle" tool-name="MWEBTranslationBundle" tool-version="1.1.0-DEV"/>
       <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
     </header>
     <body>

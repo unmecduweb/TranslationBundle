@@ -16,18 +16,18 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Translation\Extractor;
+namespace MWEB\TranslationBundle\Translation\Extractor;
 
-use ZEN\TranslationBundle\Twig\DefaultApplyingNodeVisitor;
+use MWEB\TranslationBundle\Twig\DefaultApplyingNodeVisitor;
 
-use ZEN\TranslationBundle\Exception\InvalidArgumentException;
+use MWEB\TranslationBundle\Exception\InvalidArgumentException;
 use Symfony\Component\HttpKernel\Log\LoggerInterface;
-use ZEN\TranslationBundle\Logger\LoggerAwareInterface;
+use MWEB\TranslationBundle\Logger\LoggerAwareInterface;
 
-use ZEN\TranslationBundle\Twig\RemovingNodeVisitor;
+use MWEB\TranslationBundle\Twig\RemovingNodeVisitor;
 
-use ZEN\TranslationBundle\Translation\ExtractorInterface;
-use ZEN\TranslationBundle\Model\MessageCatalogue;
+use MWEB\TranslationBundle\Translation\ExtractorInterface;
+use MWEB\TranslationBundle\Model\MessageCatalogue;
 use Symfony\Component\Finder\Finder;
 
 /**

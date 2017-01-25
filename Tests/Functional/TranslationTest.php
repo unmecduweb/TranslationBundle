@@ -1,6 +1,6 @@
 <?php
 
-namespace ZEN\TranslationBundle\Tests\Functional;
+namespace MWEB\TranslationBundle\Tests\Functional;
 
 class TranslationTest extends BaseTestCase
 {

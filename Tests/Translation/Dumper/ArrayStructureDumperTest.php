@@ -16,10 +16,10 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Tests\Translation\Dumper;
+namespace MWEB\TranslationBundle\Tests\Translation\Dumper;
 
-use ZEN\TranslationBundle\Model\Message;
-use ZEN\TranslationBundle\Model\MessageCatalogue;
+use MWEB\TranslationBundle\Model\Message;
+use MWEB\TranslationBundle\Model\MessageCatalogue;
 
 class ArrayStructureDumperTest extends \PHPUnit_Framework_TestCase
 {
@@ -48,6 +48,6 @@ class ArrayStructureDumperTest extends \PHPUnit_Framework_TestCase
 
     private function getDumper()
     {
-        return $this->getMockForAbstractClass('ZEN\TranslationBundle\Translation\Dumper\ArrayStructureDumper');
+        return $this->getMockForAbstractClass('MWEB\TranslationBundle\Translation\Dumper\ArrayStructureDumper');
     }
 }

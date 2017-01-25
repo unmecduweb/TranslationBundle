@@ -16,12 +16,12 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Tests\Translation\Comparison;
+namespace MWEB\TranslationBundle\Tests\Translation\Comparison;
 
-use ZEN\TranslationBundle\Translation\Comparison\CatalogueComparator;
-use ZEN\TranslationBundle\Translation\Comparison\ChangeSet;
-use ZEN\TranslationBundle\Model\Message;
-use ZEN\TranslationBundle\Model\MessageCatalogue;
+use MWEB\TranslationBundle\Translation\Comparison\CatalogueComparator;
+use MWEB\TranslationBundle\Translation\Comparison\ChangeSet;
+use MWEB\TranslationBundle\Model\Message;
+use MWEB\TranslationBundle\Model\MessageCatalogue;
 
 class CatalogueComparatorTest extends \PHPUnit_Framework_TestCase
 {

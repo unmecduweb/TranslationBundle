@@ -16,12 +16,12 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Translation;
+namespace MWEB\TranslationBundle\Translation;
 
-use ZEN\TranslationBundle\Exception\InvalidArgumentException;
-use ZEN\TranslationBundle\Model\MessageCatalogue;
-use ZEN\TranslationBundle\Util\FileUtils;
-use ZEN\TranslationBundle\Translation\Loader\LoaderInterface;
+use MWEB\TranslationBundle\Exception\InvalidArgumentException;
+use MWEB\TranslationBundle\Model\MessageCatalogue;
+use MWEB\TranslationBundle\Util\FileUtils;
+use MWEB\TranslationBundle\Translation\Loader\LoaderInterface;
 
 class LoaderManager
 {
@@ -50,7 +50,7 @@ class LoaderManager
     /**
      * @param $dir
      * @param $targetLocale
-     * @return \ZEN\TranslationBundle\Model\MessageCatalogue
+     * @return \MWEB\TranslationBundle\Model\MessageCatalogue
      */
     public function loadFromDirectory($dir, $targetLocale)
     {
@@ -79,7 +79,7 @@ class LoaderManager
      * @param $format
      * @return mixed
      * @throws \InvalidArgumentException
-     * @return \ZEN\TranslationBundle\Translation\Loader\LoaderInterface
+     * @return \MWEB\TranslationBundle\Translation\Loader\LoaderInterface
      */
     protected function getLoader($format)
     {

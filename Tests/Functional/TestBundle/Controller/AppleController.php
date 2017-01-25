@@ -1,6 +1,6 @@
 <?php
 
-namespace ZEN\TranslationBundle\Tests\Functional\TestBundle\Controller;
+namespace MWEB\TranslationBundle\Tests\Functional\TestBundle\Controller;
 
 use JMS\DiExtraBundle\Annotation as DI;
 use LI\SecurityExtraBundle\Annotation\PreAuthorize;

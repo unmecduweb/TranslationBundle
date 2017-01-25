@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Exception;
+namespace MWEB\TranslationBundle\Exception;
 
 /**
  * InvalidArgumentException for the TranslationBundle.

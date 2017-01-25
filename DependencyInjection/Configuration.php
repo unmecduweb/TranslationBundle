@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\DependencyInjection;
+namespace MWEB\TranslationBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -37,7 +37,7 @@ class Configuration implements ConfigurationInterface
 
         $tb = new TreeBuilder();
         $tb
-            ->root('zen_translation')
+            ->root('mweb_translation')
                 ->fixXmlConfig('config')
                 ->children()
                     ->arrayNode('locales')

@@ -7,7 +7,7 @@ also set-up some pre-defined settings via the configuration:
 .. code-block :: yml
 
     # config.yml
-    zen_translation:
+    mweb_translation:
         configs:
             app:
                 dirs: [%kernel.root_dir%, %kernel.root_dir%/../src]

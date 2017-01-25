@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Twig;
+namespace MWEB\TranslationBundle\Twig;
 
 /**
  * Performs equivalence transformations on the AST to ensure that

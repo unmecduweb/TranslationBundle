@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\DependencyInjection\Compiler;
+namespace MWEB\TranslationBundle\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
@@ -35,6 +35,6 @@ class IntegrationPass implements CompilerPassInterface
             return;
         }
 
-        $def->setClass('%zen_translation.loader.symfony.xliff_loader.class%');
+        $def->setClass('%mweb_translation.loader.symfony.xliff_loader.class%');
     }
 }

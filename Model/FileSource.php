@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Model;
+namespace MWEB\TranslationBundle\Model;
 
 class FileSource implements SourceInterface
 {

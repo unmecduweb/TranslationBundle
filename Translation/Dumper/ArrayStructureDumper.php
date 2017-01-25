@@ -16,10 +16,10 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Translation\Dumper;
+namespace MWEB\TranslationBundle\Translation\Dumper;
 
-use ZEN\TranslationBundle\Model\Message;
-use ZEN\TranslationBundle\Model\MessageCatalogue;
+use MWEB\TranslationBundle\Model\Message;
+use MWEB\TranslationBundle\Model\MessageCatalogue;
 
 abstract class ArrayStructureDumper implements DumperInterface
 {

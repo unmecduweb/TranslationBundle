@@ -1,5 +1,5 @@
 <?php
-namespace ZEN\TranslationBundle\Tests\Translation\Extractor\File\Fixture;
+namespace MWEB\TranslationBundle\Tests\Translation\Extractor\File\Fixture;
 
 use Symfony\Component\Form\Event\DataEvent;
 use Symfony\Component\Form\FormFactoryInterface;

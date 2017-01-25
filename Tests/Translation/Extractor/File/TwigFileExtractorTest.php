@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Tests\Translation\Extractor\File;
+namespace MWEB\TranslationBundle\Tests\Translation\Extractor\File;
 
 use Symfony\Bridge\Twig\Form\TwigRendererEngine;
 use Symfony\Bridge\Twig\Form\TwigRenderer;
@@ -24,17 +24,17 @@ use Symfony\Component\Routing\RequestContext;
 use Symfony\Component\Routing\RouteCollection;
 use Symfony\Component\Routing\Generator\UrlGenerator;
 use Symfony\Bridge\Twig\Extension\RoutingExtension;
-use ZEN\TranslationBundle\Twig\RemovingNodeVisitor;
-use ZEN\TranslationBundle\Twig\DefaultApplyingNodeVisitor;
-use ZEN\TranslationBundle\Exception\RuntimeException;
+use MWEB\TranslationBundle\Twig\RemovingNodeVisitor;
+use MWEB\TranslationBundle\Twig\DefaultApplyingNodeVisitor;
+use MWEB\TranslationBundle\Exception\RuntimeException;
 use Symfony\Component\Translation\MessageSelector;
 use Symfony\Component\Translation\IdentityTranslator;
 use Symfony\Bridge\Twig\Extension\TranslationExtension as SymfonyTranslationExtension;
-use ZEN\TranslationBundle\Model\FileSource;
-use ZEN\TranslationBundle\Model\Message;
-use ZEN\TranslationBundle\Model\MessageCatalogue;
-use ZEN\TranslationBundle\Twig\TranslationExtension;
-use ZEN\TranslationBundle\Translation\Extractor\File\TwigFileExtractor;
+use MWEB\TranslationBundle\Model\FileSource;
+use MWEB\TranslationBundle\Model\Message;
+use MWEB\TranslationBundle\Model\MessageCatalogue;
+use MWEB\TranslationBundle\Twig\TranslationExtension;
+use MWEB\TranslationBundle\Translation\Extractor\File\TwigFileExtractor;
 use Symfony\Bundle\FrameworkBundle\Routing\Router;
 use Symfony\Component\DependencyInjection\Container;
 use Symfony\Bridge\Twig\Extension\FormExtension;

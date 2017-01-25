@@ -16,15 +16,15 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Translation\Extractor\File;
+namespace MWEB\TranslationBundle\Translation\Extractor\File;
 
-use ZEN\TranslationBundle\Exception\RuntimeException;
+use MWEB\TranslationBundle\Exception\RuntimeException;
 use Symfony\Bridge\Twig\Node\TransNode;
 
-use ZEN\TranslationBundle\Model\FileSource;
-use ZEN\TranslationBundle\Model\Message;
-use ZEN\TranslationBundle\Model\MessageCatalogue;
-use ZEN\TranslationBundle\Translation\Extractor\FileVisitorInterface;
+use MWEB\TranslationBundle\Model\FileSource;
+use MWEB\TranslationBundle\Model\Message;
+use MWEB\TranslationBundle\Model\MessageCatalogue;
+use MWEB\TranslationBundle\Translation\Extractor\FileVisitorInterface;
 
 class TwigFileExtractor implements FileVisitorInterface, \Twig_NodeVisitorInterface
 {

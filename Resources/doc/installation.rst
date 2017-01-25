@@ -4,7 +4,7 @@ Installation
 1. Using Composer (recommended)
 -------------------------------
 
-To install ZENTranslationBundle with Composer just add the following to your
+To install MWEBTranslationBundle with Composer just add the following to your
 `composer.json` file:
 
 .. code-block :: js
@@ -41,7 +41,7 @@ register the new bundle:
     // in AppKernel::registerBundles()
     $bundles = array(
         // ...
-        new ZEN\TranslationBundle\ZENTranslationBundle(),
+        new MWEB\TranslationBundle\MWEBTranslationBundle(),
         // ...
     );
     
@@ -53,8 +53,8 @@ file of your Symfony Standard Distribution:
 
 .. code-block :: ini
 
-    [ZENTranslationBundle]
-        git=git://github.com/schmittjoh/ZENTranslationBundle.git
+    [MWEBTranslationBundle]
+        git=git://github.com/schmittjoh/MWEBTranslationBundle.git
         target=bundles/LI/TranslationBundle
         
     [php-parser]
@@ -69,7 +69,7 @@ Then register the bundle with your kernel:
     // in AppKernel::registerBundles()
     $bundles = array(
         // ...
-        new ZEN\TranslationBundle\ZENTranslationBundle(),
+        new MWEB\TranslationBundle\MWEBTranslationBundle(),
         // ...
     );
 

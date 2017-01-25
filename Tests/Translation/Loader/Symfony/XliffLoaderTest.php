@@ -16,12 +16,12 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Tests\Translation\Loader\Symfony;
+namespace MWEB\TranslationBundle\Tests\Translation\Loader\Symfony;
 
-use ZEN\TranslationBundle\Exception\InvalidArgumentException;
+use MWEB\TranslationBundle\Exception\InvalidArgumentException;
 use Symfony\Component\Config\Resource\FileResource;
 use Symfony\Component\Translation\MessageCatalogue;
-use ZEN\TranslationBundle\Translation\Loader\Symfony\XliffLoader;
+use MWEB\TranslationBundle\Translation\Loader\Symfony\XliffLoader;
 
 class XliffLoaderTest extends BaseLoaderTest
 {

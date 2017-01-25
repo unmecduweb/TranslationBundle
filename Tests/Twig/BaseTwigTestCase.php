@@ -16,12 +16,12 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Tests\Twig;
+namespace MWEB\TranslationBundle\Tests\Twig;
 
 use Symfony\Component\Translation\MessageSelector;
 use Symfony\Component\Translation\IdentityTranslator;
 use Symfony\Bridge\Twig\Extension\TranslationExtension as SymfonyTranslationExtension;
-use ZEN\TranslationBundle\Twig\TranslationExtension;
+use MWEB\TranslationBundle\Twig\TranslationExtension;
 
 abstract class BaseTwigTestCase extends \PHPUnit_Framework_TestCase
 {

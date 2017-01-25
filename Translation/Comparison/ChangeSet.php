@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Translation\Comparison;
+namespace MWEB\TranslationBundle\Translation\Comparison;
 
 class ChangeSet
 {

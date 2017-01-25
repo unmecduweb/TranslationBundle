@@ -16,9 +16,9 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Translation\Comparison;
+namespace MWEB\TranslationBundle\Translation\Comparison;
 
-use ZEN\TranslationBundle\Model\MessageCatalogue;
+use MWEB\TranslationBundle\Model\MessageCatalogue;
 
 /**
  * Compares two message catalogues.

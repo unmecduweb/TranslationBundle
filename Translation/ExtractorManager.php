@@ -16,14 +16,14 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Translation;
+namespace MWEB\TranslationBundle\Translation;
 
-use ZEN\TranslationBundle\Exception\InvalidArgumentException;
+use MWEB\TranslationBundle\Exception\InvalidArgumentException;
 use Symfony\Component\HttpKernel\Log\LoggerInterface;
 
-use ZEN\TranslationBundle\Model\MessageCatalogue;
-use ZEN\TranslationBundle\Translation\Extractor\FileExtractor;
-use ZEN\TranslationBundle\Logger\LoggerAwareInterface;
+use MWEB\TranslationBundle\Model\MessageCatalogue;
+use MWEB\TranslationBundle\Translation\Extractor\FileExtractor;
+use MWEB\TranslationBundle\Logger\LoggerAwareInterface;
 
 class ExtractorManager implements ExtractorInterface
 {
@@ -83,7 +83,7 @@ class ExtractorManager implements ExtractorInterface
 
     /**
      * @param $directory
-     * @throws \ZEN\TranslationBundle\Exception\InvalidArgumentException
+     * @throws \MWEB\TranslationBundle\Exception\InvalidArgumentException
      */
     public function addDirectory($directory)
     {
@@ -112,7 +112,7 @@ class ExtractorManager implements ExtractorInterface
 
     /**
      * @param array $aliases
-     * @throws \ZEN\TranslationBundle\Exception\InvalidArgumentException
+     * @throws \MWEB\TranslationBundle\Exception\InvalidArgumentException
      */
     public function setEnabledExtractors(array $aliases)
     {
@@ -126,7 +126,7 @@ class ExtractorManager implements ExtractorInterface
     }
 
     /**
-     * @return \ZEN\TranslationBundle\Model\MessageCatalogue
+     * @return \MWEB\TranslationBundle\Model\MessageCatalogue
      */
     public function extract()
     {

@@ -16,17 +16,17 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle;
+namespace MWEB\TranslationBundle;
 
-use ZEN\TranslationBundle\DependencyInjection\Compiler\MountDumpersPass;
-use ZEN\TranslationBundle\DependencyInjection\Compiler\MountLoadersPass;
-use ZEN\TranslationBundle\DependencyInjection\Compiler\MountExtractorsPass;
-use ZEN\TranslationBundle\DependencyInjection\Compiler\MountFileVisitorsPass;
-use ZEN\TranslationBundle\DependencyInjection\Compiler\IntegrationPass;
+use MWEB\TranslationBundle\DependencyInjection\Compiler\MountDumpersPass;
+use MWEB\TranslationBundle\DependencyInjection\Compiler\MountLoadersPass;
+use MWEB\TranslationBundle\DependencyInjection\Compiler\MountExtractorsPass;
+use MWEB\TranslationBundle\DependencyInjection\Compiler\MountFileVisitorsPass;
+use MWEB\TranslationBundle\DependencyInjection\Compiler\IntegrationPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class ZENTranslationBundle extends Bundle
+class MWEBTranslationBundle extends Bundle
 {
     const VERSION = '1.1.0-DEV';
 

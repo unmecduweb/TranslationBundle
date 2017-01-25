@@ -13,7 +13,7 @@
 >
          
     <testsuites>
-        <testsuite name="ZENTranslationBundle Test Suite">
+        <testsuite name="MWEBTranslationBundle Test Suite">
             <directory>./Tests</directory>
         </testsuite>
     </testsuites>

@@ -16,10 +16,10 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Tests\Model;
+namespace MWEB\TranslationBundle\Tests\Model;
 
-use ZEN\TranslationBundle\Model\Message;
-use ZEN\TranslationBundle\Model\MessageCatalogue;
+use MWEB\TranslationBundle\Model\Message;
+use MWEB\TranslationBundle\Model\MessageCatalogue;
 
 class MessageCatalogueTest extends \PHPUnit_Framework_TestCase
 {
@@ -74,7 +74,7 @@ class MessageCatalogueTest extends \PHPUnit_Framework_TestCase
         $catalogue->add(new Message('foo'));
 
         $col = $catalogue->getDomain('messages');
-        $this->assertInstanceOf('ZEN\TranslationBundle\Model\MessageCollection', $col);
+        $this->assertInstanceOf('MWEB\TranslationBundle\Model\MessageCollection', $col);
         $this->assertEquals(array('foo'), array_keys($col->all()));
     }
 
@@ -94,7 +94,7 @@ class MessageCatalogueTest extends \PHPUnit_Framework_TestCase
         $cat->add(new Message('foo', 'foo'));
 
         $this->assertEquals(array('messages', 'foo'), array_keys($domains = $cat->getDomains()));
-        $this->assertInstanceOf('ZEN\TranslationBundle\Model\MessageCollection', $domains['foo']);
+        $this->assertInstanceOf('MWEB\TranslationBundle\Model\MessageCollection', $domains['foo']);
     }
 
     public function testMerge()

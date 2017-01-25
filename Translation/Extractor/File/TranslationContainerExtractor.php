@@ -16,13 +16,13 @@
  * limitations under the License.
  */
 
-namespace ZEN\TranslationBundle\Translation\Extractor\File;
+namespace MWEB\TranslationBundle\Translation\Extractor\File;
 
-use ZEN\TranslationBundle\Exception\RuntimeException;
-use ZEN\TranslationBundle\Model\Message;
+use MWEB\TranslationBundle\Exception\RuntimeException;
+use MWEB\TranslationBundle\Model\Message;
 
-use ZEN\TranslationBundle\Model\MessageCatalogue;
-use ZEN\TranslationBundle\Translation\Extractor\FileVisitorInterface;
+use MWEB\TranslationBundle\Model\MessageCatalogue;
+use MWEB\TranslationBundle\Translation\Extractor\FileVisitorInterface;
 
 /**
  * Extracts translations from designated translation containers.
@@ -72,7 +72,7 @@ class TranslationContainerExtractor implements FileVisitorInterface, \PHPParser_
                 $name = $this->useStatements[$name];
             }
 
-            if ('ZEN\TranslationBundle\Translation\TranslationContainerInterface' === $name) {
+            if ('MWEB\TranslationBundle\Translation\TranslationContainerInterface' === $name) {
                 $isContainer = true;
                 break;
             }
